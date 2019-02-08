@@ -23,9 +23,6 @@ class Pokemon
     Pokemon.new(id: row[0], name: row[1], type: row[2], db:nil)
   end 
   
-  def check_change_hp(num, db)
-    db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", [num], [self.id])
-    self.hp = num
-  end
+ 
   
 end
